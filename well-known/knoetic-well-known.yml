@@ -1,0 +1,53 @@
+generated: '2026-07-19'
+method: searched
+source: live HTTP probes of the /.well-known/ discovery surface
+result: none
+notes: >-
+  No /.well-known/ discovery documents are published on any Knoetic/CPOHQ host. IMPORTANT for re-runs:
+  app.knoetic.com is a single-page application with a catch-all route that returns HTTP 200 and the
+  SPA index.html for EVERY path, including /.well-known/* and /llms.txt. These are soft 404s, not real
+  documents — verified by requesting a nonsense control path
+  (/this-path-is-definitely-fake-12345), which returned the identical HTML 200. Do not record these as
+  hits. No WellKnown or SecurityTxt pointer is wired in apis.yml because nothing genuine was found.
+hosts:
+- host: https://cpohq.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://app.knoetic.com
+  spa_catch_all: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    genuine: false
+    reason: SPA catch-all returns index.html
+  - path: /.well-known/openid-configuration
+    status: 200
+    genuine: false
+    reason: SPA catch-all returns index.html
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    genuine: false
+    reason: SPA catch-all returns index.html
+  - path: /.well-known/api-catalog
+    status: 200
+    genuine: false
+    reason: SPA catch-all returns index.html
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    genuine: false
+    reason: SPA catch-all returns index.html
+  - path: /llms.txt
+    status: 200
+    genuine: false
+    reason: SPA catch-all returns index.html
