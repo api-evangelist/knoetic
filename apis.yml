@@ -1,9 +1,30 @@
 aid: knoetic
 name: Knoetic
-description: 'Knoetic is a company surfaced as a portfolio company of accel, eqt-ventures, menlo-ventures
-  and added to the API Evangelist network as a stub for enrichment. Sector: hr-tech. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: 'Knoetic is an HR technology company that operates CPOHQ, a platform built for Chief
+  People Officers and senior people-function executives. The product combines three surfaces: a
+  private, invite-only community of 3,000+ Chief People Officers (one member per company) who exchange
+  confidential playbooks and benchmarks; an AI "Chief of Staff" that delivers personalized morning
+  briefings and monitors market and talent trends; and a suite of workflow-specific AI agents for
+  people analytics, performance insight, and peer benchmarking across the people function. The company
+  was founded as Knoetic around a people-analytics product and has since consolidated its public brand
+  on CPOHQ — knoetic.com now redirects to cpohq.com, while the customer application remains at
+  app.knoetic.com. Knoetic has raised $50M+ from Accel, EQT Ventures, Menlo Ventures and angel
+  investors. As of this enrichment pass Knoetic publishes no public API, developer portal, SDKs, or
+  API documentation; the platform is a closed B2B SaaS offering sold to enterprise people teams. It
+  does publish a Vanta-hosted trust center and displays a SOC 2 Type II attestation.'
 url: https://raw.githubusercontent.com/api-evangelist/knoetic/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cpohq.com/cpohq-social-preview.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,13 +32,21 @@ x-backed-by:
 - eqt-ventures
 - menlo-ventures
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: no-public-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Hr Tech
+- People Analytics
+- Human Resources
+- Workforce Analytics
+- Artificial Intelligence
+- AI Agents
+- SaaS
+- Community
+- Benchmarking
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,5 +54,27 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/knoetic-domain-security.yml
 - type: Website
-  url: http://knoetic.com
+  url: https://cpohq.com
+- type: Login
+  url: https://app.knoetic.com
+- type: TrustCenter
+  url: https://trust.knoetic.com
+- type: Compliance
+  url: https://trust.knoetic.com
+- type: GitHubOrganization
+  url: https://github.com/knoetic
+- type: Careers
+  url: https://cpohq.com/careers
+- type: TrustCenter
+  name: Trust center artifact
+  url: security/knoetic-trust-center.yml
+- type: LLMsTxt
+  url: llms/knoetic-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
