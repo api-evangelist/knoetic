@@ -13,6 +13,17 @@ description: 'Knoetic is an HR technology company that operates CPOHQ, a platfor
   API documentation; the platform is a closed B2B SaaS offering sold to enterprise people teams. It
   does publish a Vanta-hosted trust center and displays a SOC 2 Type II attestation.'
 url: https://raw.githubusercontent.com/api-evangelist/knoetic/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: approval
