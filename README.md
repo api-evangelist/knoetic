@@ -64,35 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Knoetic is an HR technology company that operates **CPOHQ**, a platform for Chief People Officers and
-senior people-function executives: a private, invite-only community of 3,000+ CPOs (one member per
-company), an AI "Chief of Staff" delivering personalized briefings and market/talent monitoring, and a
-suite of workflow-specific AI agents for people analytics, performance insight, and peer benchmarking.
+Knoetic is an HR technology company that operates CPOHQ, a platform built for Chief People Officers and senior people-function executives. The product combines three surfaces: a private, invite-only community of 3,000+ Chief People Officers (one member per company) who exchange confidential playbooks and benchmarks; an AI "Chief of Staff" that delivers personalized morning briefings and monitors market and talent trends; and a suite of workflow-specific AI agents for people analytics, performance insight, and peer benchmarking across the people function. The company was founded as Knoetic around a people-analytics product and has since consolidated its public brand on CPOHQ — knoetic.com now redirects to cpohq.com, while the customer application remains at app.knoetic.com. Knoetic has raised $50M+ from Accel, EQT Ventures, Menlo Ventures and angel investors. As of this enrichment pass Knoetic publishes no public API, developer portal, SDKs, or API documentation; the platform is a closed B2B SaaS offering sold to enterprise people teams. It does publish a Vanta-hosted trust center and displays a SOC 2 Type II attestation.
 
-Backed by: Accel, EQT Ventures, Menlo Ventures ($50M+ raised).
+**Areas:** Company · Human Resources · People Analytics · Workforce Analytics · Artificial Intelligence · AI Agents · Software-as-a-Service · Community · Benchmarking
 
-## Brand note
+## Knoetic on APIs.io
 
-`knoetic.com` now 301-redirects to **https://cpohq.com**. Knoetic remains the company name; CPOHQ is
-the product and public brand. The customer application is still served from `app.knoetic.com`.
+Everything profiled for Knoetic is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/knoetic/](https://apis.io/providers/knoetic/)** — or go straight to one of the APIs or properties below.
 
-## API surface
+### Published properties
 
-**None public.** As of the 2026-07-19 enrichment pass Knoetic publishes no API documentation,
-developer portal, OpenAPI/AsyncAPI specification, SDKs, CLI, webhook catalog, MCP server, changelog,
-status page, or sandbox. The GitHub organization `github.com/knoetic` exists but has zero public
-repositories, and there are no packages on npm or PyPI. `api.knoetic.com` resolves and returns JSON
-but is a private application backend with no published contract. The `apis[]` array is intentionally
-empty.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## What was captured
+#### Security (2)
 
-| Artifact | Notes |
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Knoetic Domain Security](https://apis.io/security/knoetic/knoetic-domain-security/)
+- [Knoetic Trust Center](https://apis.io/security/knoetic/knoetic-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://cpohq.com)
+- [Compliance](https://trust.knoetic.com)
+- [Trust centre](https://trust.knoetic.com)
+- [GitHub](https://github.com/knoetic)
+
+## API Evangelist rating
+
+**Kin Score 9.0** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `security/knoetic-trust-center.yml` | Vanta-hosted trust center at `trust.knoetic.com`; SOC 2 Type II |
-| `security/knoetic-domain-security.yml` | TLS/HSTS/SPF/DMARC across both registrable domains |
-| `well-known/knoetic-well-known.yml` | Negative result — no `/.well-known/` documents published |
-| `llms/knoetic-llms.txt` | Generated agent-facing summary (not published by Knoetic) |
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 22.4 |
 
-> Re-run caution: `app.knoetic.com` is a SPA with a catch-all route that returns HTTP 200 for every
-> path, including `/.well-known/*` and `/llms.txt`. Those are soft 404s, not real documents.
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.0** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/knoetic/](https://apis.io/providers/knoetic/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Knoetic: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/knoetic/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
